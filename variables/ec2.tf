@@ -26,7 +26,7 @@ egress {
 resource "aws_instance" "terraform" {
 
     ami = var.ami
-    instance_type = var.instance_type
+    instance_type = var.env == "prod" ? "t3.medium" : "t2.micro" 
     vpc_security_group_ids = [aws_security_group.allow_all_traffic.id]
     tags = var.tags
 }

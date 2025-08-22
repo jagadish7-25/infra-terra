@@ -16,12 +16,7 @@ variable "ami" {
   default     = "ami-09c813fb71547fc4f"
   
 }
-variable "instance_type" {
-  description = "The type of EC2 instance"
-  type        = string
-  default     = "t2.micro"
-  
-}
+
 variable "tags" {
     type = map #optional
     default = {
@@ -31,4 +26,8 @@ variable "tags" {
         Environment = "DEV"
         Terraform = "true"
     }
+}
+variable "env" {
+    type = string
+    default = "dev"
 }
