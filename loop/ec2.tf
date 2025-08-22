@@ -30,6 +30,6 @@ resource "aws_instance" "terraform" {
     count = "var.env" == "prod" ? 3: 2 
     vpc_security_group_ids = [aws_security_group.allow_all_traffic.id]
     tags = {
-        Name = "terraform"
+        Name = var.instance_names[count.index] 
     }
 }
