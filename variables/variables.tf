@@ -22,3 +22,13 @@ variable "instance_type" {
   default     = "t2.micro"
   
 }
+variable "tags" {
+    type = map #optional
+    default = {
+        Name = "backend"
+        Project = "expense"
+        Component = "backend"
+        Environment = "DEV"
+        Terraform = "true"
+    }
+}
