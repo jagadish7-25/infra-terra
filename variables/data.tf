@@ -10,10 +10,7 @@ data "aws_ami" "finding" {
     name   = "name"
     values = ["RHEL-9-DevOps-Practice"]
   }
-   filter {
-    name   = "image-id"
-    values = [data.aws_instance.finding.ami]
-  }
+   
 }
 output "ami_name" {
   value = data.aws_ami.finding.name
