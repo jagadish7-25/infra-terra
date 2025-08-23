@@ -17,3 +17,8 @@ variable "domain_name" {
     default = "chocojohns.bar"
   
 }
+variable "instace_type" {
+    type = string
+    default = "t2.micro"
+  
+}

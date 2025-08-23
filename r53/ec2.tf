@@ -25,7 +25,7 @@ egress {
 resource "aws_instance" "expense" {
 
     ami = "ami-09c813fb71547fc4f"
-    instance_type = "t2.micro"
+    instance_type = var.instace_type
     
     count = length(var.instance_names)
     vpc_security_group_ids = [aws_security_group.allow_all_traffic.id]
