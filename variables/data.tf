@@ -9,6 +9,6 @@ data "aws_ami" "finding" {
 }
 
 output "finding" {
-  value = data.aws_ami.finding.id
+  value = data.aws_ami.finding.ami_id
   
 }
