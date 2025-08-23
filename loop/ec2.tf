@@ -33,3 +33,5 @@ resource "aws_instance" "terraform" {
         Name = var.instance_names[count.index] 
     }
 }
+
+  
