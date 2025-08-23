@@ -6,6 +6,10 @@ data "aws_ami" "finding" {
     Name   = "terraform"
     instace_type = "t2.micro"
   }
+  filter {
+    name   = "name"
+    values = ["RHEL-9-DevOps-Practice"]
+  }
 }
 
 output "finding" {
